@@ -21,7 +21,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000'], // your frontend origin
+      origin: ['http://localhost:3000','https://virtue-s.vercel.app/'], // your frontend origin
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       headers: ['Content-Type'],
     },
