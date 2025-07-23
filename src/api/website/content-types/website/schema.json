@@ -12,13 +12,12 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
-      "type": "uid"
-    },
-    "description": {
-      "type": "text"
+      "type": "uid",
+      "required": true
     },
     "blogs": {
       "type": "relation",

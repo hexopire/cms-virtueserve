@@ -4,7 +4,7 @@
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "blog"
+    "displayName": "Blog"
   },
   "options": {
     "draftAndPublish": true
@@ -12,24 +12,27 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
-      "type": "uid"
-    },
-    "summary": {
-      "type": "text"
+      "type": "uid",
+      "required": true
     },
     "content": {
-      "type": "blocks"
+      "type": "text"
     },
-    "website": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::website.website",
-      "inversedBy": "blogs"
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
-    "imageslide": {
+    "images": {
       "type": "media",
       "multiple": true,
       "allowedTypes": [
@@ -38,6 +41,19 @@
         "videos",
         "audios"
       ]
+    },
+    "website": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::website.website",
+      "inversedBy": "blogs"
+    },
+    "isPublishedAt": {
+      "type": "datetime"
+    },
+    "context": {
+      "type": "blocks",
+      "required": true
     }
   }
 }
